@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+{% block title %} {{super()}} | Game {% endblock %}
+{% block content %}
+
+{% if winner == 'tie' %}
+<h1>There was a tie!</h1>
+<br>
+
+{% else %}
+<h1>{{ winner.capitalize() }} WINS!</h1>
+<br>
+{% endif %}
+
+<div>
+    <h4>Player chose: {{ player_choice }}</h4>
+    <h4>Computer chose: {{ computer_choice }}</h4>
+    <br>
+    <h3>To play again just click on one of the images.</h3>
+</div>
+{% endblock %}
